@@ -31,7 +31,7 @@
         <form class="form-inline">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="World">
+                <input type="text" class="form-control" id="name" placeholder="Earth">
             </div>
             <button id="invoke" type="submit" class="btn btn-success">Invoke</button>
         </form>
@@ -49,7 +49,7 @@
 <script>
     $(document).ready(function() {
        $("#invoke").click(function(e) {
-          var n = $("#name").val() || "World";
+          var n = $("#name").val() || "Earth";
           $.getJSON("/api/greeting?name=" + n, function(res) {
               $("#greeting-result").text(JSON.stringify(res));
           });
